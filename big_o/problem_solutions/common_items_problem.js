@@ -19,6 +19,10 @@
 // we can say it is more of a O(a * b) time complexity because for each element in the first array,
 // it iterates through all elements in the second array. The space complexity is O(1)
 // because it uses a constant amount of space regardless of the input size.
+
+const array1 = ["a", "b", "c", "x"];
+const array2 = ["z", "y", "x"];
+
 function containsCommonItem(arr1, arr2) {
   for (let i = 0; i < arr1.length; i++) {
     for (let j = 0; j < arr2.length; j++) {
@@ -49,3 +53,9 @@ function containsCommonItem2(arr1, arr2) {
   }
   return false;
 }
+
+function containsCommonItem3(arr1, arr2) {
+  return arr1.some((item) => arr2.includes(item));
+}
+
+containsCommonItem3(array1, array2);
