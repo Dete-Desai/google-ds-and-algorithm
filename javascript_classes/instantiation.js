@@ -1,8 +1,8 @@
 // Instantiation of a class in JavaScript
 
 class Player {
+  // constructor method to initialize new objects
   constructor(name, type) {
-    // constructor method to initialize new objects
     this.name = name; // 'this' refers to the instance being created
     this.type = type; // setting properties on the instance
   }
@@ -32,5 +32,6 @@ const wizard2 = new Wizard("Shawn", "Dark Magic"); // creating another instance 
 wizard1.introduce(); // calling the introduce method on wizard1
 wizard2.introduce(); // calling the introduce method on wizard2
 wizard1.Play(); // calling the Player method on wizard1
+wizard2.Play(); // calling the Player method on wizard2
 
 // The above code demonstrates class instantiation, inheritance, and method definitions in JavaScript.
