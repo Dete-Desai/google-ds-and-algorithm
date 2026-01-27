@@ -23,9 +23,13 @@ function stringReversal2(str) {
 }
 
 function stringReversal3(str) {
+    // Using built-in methods
+    // Split the string into an array of characters, reverse the array, and join it back into a string
     return str.split('').reverse().join('');
 }
 
+// Using built-in methods
+// Split the string into an array of characters, reverse the array, and join it back into a string
 const stringReversal4 = str => [...str].reverse().join('');
 
 console.log(stringReversal("First Reversal"));
