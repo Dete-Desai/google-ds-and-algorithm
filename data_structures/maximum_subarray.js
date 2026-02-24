@@ -35,6 +35,24 @@
 // 53. Maximum Subarray Solution
 // ------------------------------
 
+// This solves the Maximum Subarray 
+// Problem: Find the contiguous subarray within an array that has the largest sum.
+
+// Initial Setup:
+
+// maxSum = -Infinity: We start with the smallest possible value so any sum will be larger
+// currentSum = 0: Start with no elements in our current subarray
+
+// Step 1: Add the current number to our ongoing subarray sum.
+// Step 2: Update maxSum if the currentSum is greater than maxSum. This keeps track of the largest sum we've seen so far.
+// Step 3: If currentSum drops below 0, reset it to 0. This is because a negative sum would only decrease the total for any future subarray, so we start fresh from the next number.
+// Step 4: Continue this process for each number in the array. By the end, maxSum will hold the largest sum of any contiguous subarray.
+// This algorithm is efficient with a time complexity of O(n) since we traverse the array once, and a space complexity of O(1) as we only use a couple of variables to keep track of sums.
+// # Complexity
+// - Time complexity: O(n) - We traverse the array once.
+// - Space complexity: O(1) - We use only a constant amount of space for maxSum and currentSum.
+
+
 var maxSubArray = function(nums) {
     let maxSum = -Infinity;
     let currentSum = 0;
