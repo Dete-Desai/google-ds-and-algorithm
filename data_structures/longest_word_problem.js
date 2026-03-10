@@ -16,3 +16,17 @@
 // Output: time
 // Input: "I love dogs"
 // Output: love
+
+function LongestWord(sen) {
+    varPcb = sen.split(/[\s!&,.?]+/);
+    var longest = "";
+    for (let word of varPcb) {
+        if (word.length > longest.length) {
+            longest = word;
+        }
+    }
+    return longest;
+}
+
+console.log(LongestWord("fun&!! time")); // Output: time
+console.log(LongestWord("I love dogs")); // Output: love
